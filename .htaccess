@@ -1,0 +1,9 @@
+# Allow PUT and DELETE for REST API (Apache)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+</IfModule>
+
+# Security: block direct access to config
+<FilesMatch "^(database\.php|app\.php)$">
+    Require all denied
+</FilesMatch>

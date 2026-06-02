@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nova Shop — modern ecommerce with immersive 3D product experiences." />
+  <title>Nova Shop | Modern Ecommerce</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="logo" aria-label="Nova Shop home">
+        <span class="logo-orb"></span>
+        <span class="logo-text">Nova<span>Shop</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#categories" class="nav-link">Categories</a></li>
+        <li><a href="#products" class="nav-link">Products</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#newsletter" class="nav-link">Deals</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn search-btn" aria-label="Search products">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+        </button>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9H7.5L6 6z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6L5 3H2"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="grid-floor"></div>
+      </div>
+
+      <div class="hero-content container">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Spring Collection 2026</p>
+          <h1>Shop in <span class="gradient-text">3D</span> dimension</h1>
+          <p class="hero-desc">Discover premium products with immersive previews, smooth animations, and checkout built for every screen.</p>
+          <div class="hero-cta">
+            <a href="#products" class="btn btn-primary">Explore Collection</a>
+            <a href="#features" class="btn btn-ghost">How it works</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>2.4k+</strong><span>Products</span></div>
+            <div><strong>98%</strong><span>Happy buyers</span></div>
+            <div><strong>24h</strong><span>Fast delivery</span></div>
+          </div>
+        </div>
+
+        <div class="hero-stage reveal" data-tilt>
+          <div class="stage-card">
+            <div class="product-3d" id="heroProduct">
+              <div class="product-cube">
+                <div class="cube-face front">
+                  <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop" alt="Featured smartwatch" />
+                </div>
+                <div class="cube-face back"></div>
+                <div class="cube-face right"></div>
+                <div class="cube-face left"></div>
+                <div class="cube-face top"></div>
+                <div class="cube-face bottom"></div>
+              </div>
+            </div>
+            <div class="stage-badge">
+              <span class="badge-price">$249</span>
+              <span class="badge-label">Bestseller</span>
+            </div>
+          </div>
+          <div class="floating-chip chip-1">Free shipping</div>
+          <div class="floating-chip chip-2">AR Preview</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories section" id="categories">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Shop by category</h2>
+          <p>Curated collections with depth-first browsing</p>
+        </div>
+        <div class="category-grid">
+          <article class="category-card reveal" data-tilt style="--hue: 260">
+            <div class="category-icon">⌚</div>
+            <h3>Wearables</h3>
+            <p>124 items</p>
+            <span class="category-arrow">→</span>
+          </article>
+          <article class="category-card reveal" data-tilt style="--hue: 320">
+            <div class="category-icon">🎧</div>
+            <h3>Audio</h3>
+            <p>86 items</p>
+            <span class="category-arrow">→</span>
+          </article>
+          <article class="category-card reveal" data-tilt style="--hue: 180">
+            <div class="category-icon">💻</div>
+            <h3>Tech</h3>
+            <p>210 items</p>
+            <span class="category-arrow">→</span>
+          </article>
+          <article class="category-card reveal" data-tilt style="--hue: 40">
+            <div class="category-icon">👟</div>
+            <h3>Lifestyle</h3>
+            <p>156 items</p>
+            <span class="category-arrow">→</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="products section" id="products">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Trending products</h2>
+          <div class="filter-tabs" role="tablist">
+            <button class="filter-tab active" data-filter="all">All</button>
+            <button class="filter-tab" data-filter="tech">Tech</button>
+            <button class="filter-tab" data-filter="audio">Audio</button>
+            <button class="filter-tab" data-filter="wear">Wear</button>
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="features section" id="features">
+      <div class="container">
+        <div class="features-layout">
+          <div class="features-text reveal">
+            <h2>Built for modern shopping</h2>
+            <p>Responsive layouts, GPU-accelerated 3D transforms, and micro-interactions that feel premium on phone, tablet, and desktop.</p>
+            <ul class="feature-list">
+              <li>
+                <span class="feature-icon">◆</span>
+                <div>
+                  <strong>3D product cards</strong>
+                  <p>Perspective tilt follows your cursor and touch.</p>
+                </div>
+              </li>
+              <li>
+                <span class="feature-icon">◆</span>
+                <div>
+                  <strong>Instant cart</strong>
+                  <p>Add items without leaving the page.</p>
+                </div>
+              </li>
+              <li>
+                <span class="feature-icon">◆</span>
+                <div>
+                  <strong>Mobile-first</strong>
+                  <p>Fluid grids and touch-friendly controls.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="features-visual reveal" data-tilt>
+            <div class="orbit-ring">
+              <div class="orbit-item" style="--i: 0">🛒</div>
+              <div class="orbit-item" style="--i: 1">📦</div>
+              <div class="orbit-item" style="--i: 2">💳</div>
+              <div class="orbit-item" style="--i: 3">✨</div>
+              <div class="orbit-core">Nova</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter section" id="newsletter">
+      <div class="container">
+        <div class="newsletter-card reveal" data-tilt>
+          <h2>Get 15% off your first order</h2>
+          <p>Join the list for exclusive drops and early access.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="you@email.com" required aria-label="Email address" />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#" class="logo footer-logo">
+          <span class="logo-orb"></span>
+          <span class="logo-text">Nova<span>Shop</span></span>
+        </a>
+        <p class="footer-tagline">Modern ecommerce, crafted with HTML, CSS &amp; JS.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#products">New arrivals</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#newsletter">Offers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Twitter">X</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright container">© 2026 Nova Shop. All rights reserved.</p>
+  </footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h3>Your cart</h3>
+        <button class="icon-btn close-cart" id="closeCart" aria-label="Close cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <ul class="cart-items" id="cartItems"></ul>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">$0.00</strong>
+        </div>
+        <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
